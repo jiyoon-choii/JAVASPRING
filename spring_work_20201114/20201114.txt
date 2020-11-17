@@ -1,0 +1,53 @@
+20201114 
+
+- 자바 한다 -> 자바 스프링프레임워크 할 수 있당 
+- 자바 : 이식성 좋음, 웹 프로그램 개발에 최적화 
+- 자바 설치해야 프레임워크 실행 가능. legacy(old) / boot(new) 방식 있음 - 우린 boot로 할 것임. 환결설정 등 더 수월함 
+- 오늘 할 거 : longbok, MVC, Controller(사용자 요청을 제일 먼저 받음), JSP(사용자에게 응답하는 페이지)/JSTL, DB연결 
+- 마지막에 프로젝트 제출할 것임 
+- JAVA : 8 
+
+프레임워크) 
+- 핵심 로직 짤 수 있도록 해주는 반제품 -- 웹서버에 배포 (java의 tomcat 기능) 
+- 패턴화되어있음 
+- MVC 어떻게 처리하는지 
+- EJB : 서버 좋아야 함 -> 스프링 : 웹 관련만 뽑아 경량화됨
+- 컨테이너 : 모든 권한을 가진 서플릿 
+- 스프링 : 컨테이너에서 객체(bin) 만들어서 주입 -- 소프트웨어 부품화 
+- 특징 : 
+1. 제어역행 : 제어가 바깥에 있다.
+2. 의존성주입 
+3. 관점지향 : 유효성검사, 여러 칸에 들어가는 같은 로고 등 여러번 실행되는 걸 한 번에 짜서 필요한 곳에 끼워넣을 수 있음 
+
+- Core : 접근 방식 제공 
+- ORM  : ~에 연동 기능 제공
+- WebMVC : 웹 관련 MVC 기능 제공 
+- mysql 사용 
+
+1. 환결설정 
+: 시스템 변수에 새로 만들기 - 이름:JAVA_HOME/경로:Program_files에 jdk 있는 java폴더 들어가서 경로 복사 - Path 에 새로만들기- %JAVA_HOME%\bin 추가 
+2. 스프링 설치. 압출풀린폴더,툴 프로그램 특정 드라이브에 옮기기 - 같은 폴더에 프로젝트 할 새 폴더 만들기 - 폴더에 spring tool suit 프로그램 실행 
+- 경로는 새 폴더로 지정  
+3. 스프링툴 - FILE-NEW-NEW SPRING STARTER PROJECT - 책에 있는 과정대로 프로젝트 생성,라이브러리 다운로드 
+(# C - 사용자 - 처음 로그인 유저 폴더 - .m2 - repository -- 라이브러리 다운 덜 받아질 때 있음, 그럼 여기서 다 지우고 다시 다운받으면 됨)
+3-1. 한글 깨짐 확인 :  window - preferences - General - Workspace - Text file encoding-Other : UTF-8(최신은 이것 쓰는 추세) - APPLY 
+			- web - CSS/HTML/JSP 에도 적용 
+3-2. 정상 작동 확인 : 프로젝트 오른쪽 마우스 - RUN AS - ~ APP - 정상 작동 확인 
+-- 이슈 : 8080 사용하고 있다는 에러 - 해결법 ppt 참조. 이 에러 뜨면 새 프로젝트 만들 때마다 새 포트 입력해줘야 함 
+* Chrome ) 주소창 : localhost:포트번호(8090) 
+-- 메뉴 : ppt 참조 
++ HTML : 양쪽에서 컨텐츠 마크 (어떻게 보여줄 것이다) / XML : 이 데이터가 어떤 것인지 자료구조 가지고 있음
+4. 웹 생성 -- 책 참조 
+-- 라이브러리 덜 받아졌을 시 : 프로젝트 오른쪽 마우스 - maven - updateprogram 
+-- jsp 파일 수정 시는 재작동 필요 x / 자바 파일 수정 시 한 번 멈추고 재작동
+-- class 생성 시 첫 글자 대문자로  
+**순서** 
+프로젝트 생성 - src/main/java 에 새로운 package 만들기 (controller / domain) - src에 views-메뉴 만들기 - pom.xml에 의존라이브러리 추가 
+- src/main/resources에 포트/prefix,suffix 추가 - test
+-- ctr+space bar = 어노테이션 임포트 
+-- ctr+shift+o = 어노테이션 적용 
+5. form 만들기 
+- POST / GET 
+- 페이지가 나오는 건 GET이어야 함 (POST는 GET에서 받아야 나옴) 
+
+ 
